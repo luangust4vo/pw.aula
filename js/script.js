@@ -2,6 +2,8 @@ document.addEventListener("DOMContentLoaded", (event) => {
     searchSubs();
 });
 
+let modal;
+
 function changeTheme() {
     let icon_theme = document.getElementById('toggle-button');
 
@@ -16,15 +18,19 @@ function changeTheme() {
     }
 }
 
-function learnMore() {
-    const modal = document.querySelector('.modal');
+function showModal(elementId) {
+    modal = document.getElementById(elementId);
 
     modal.classList.remove('hidden');
     modal.addEventListener('click', e => {
         if (e.target == modal) {
-            modal.classList.add('hidden');
+            closeModal(elementId);
         }
     });
+}
+
+function closeModal() {
+    modal.classList.add('hidden');
 }
 
 async function searchSubs() {

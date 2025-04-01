@@ -27,7 +27,7 @@
                 <p><span class="bold">Local:</span> IFPR Campus Paranavaí</p>
                 <div class="buttons">
                     <button class="button">Inscreva-se</button>
-                    <button class="button" onclick="">Saiba Mais</button>
+                    <button class="button" onclick="showModal('learn-more')">Saiba Mais</button>
                 </div>
             </div>
             <div class="cards">
@@ -53,8 +53,9 @@
         </section>
     </main>
 
-    <div class="modal hidden">
+    <div class="modal hidden" id="learn-more">
         <div class="modal-content">
+            <span id="close-modal" class="close-modal" onclick="closeModal()">&times;</span>
             <h1>SETIF 2025</h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe quisquam perspiciatis, autem eaque
                 quibusdam doloremque corporis sequi pariatur quia sit obcaecati temporibus ipsam accusamus eum fuga
